@@ -22,6 +22,7 @@ pipeline
         
         sh 'docker push rajeshktm007/summa'
       }
+    }
       stage('DEPLOYMENT')
       {
         steps{
