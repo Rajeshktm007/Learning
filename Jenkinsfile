@@ -16,10 +16,10 @@ pipeline
     {
       steps
       {
-        withCredentials([string(credentialsId: 'DOCKERHUBPASSWD', variable: 'DOCKERHUBPASSWD')]) 
-    
-
+        withCredentials([string(credentialsId: 'DOCKERHUBPASSWD', variable: 'DOCKERHUBPASSWD')]) {
         sh 'docker login -u rajeshktm007 -p ${DOCKERHUBPASSWD}'
+        }
+        
         sh 'docker push rajeshktm007/summa'
       }
     }
