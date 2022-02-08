@@ -1,19 +1,15 @@
 pipeline
 {
-  agent
-  {
-    docker
-    {
-      image 'maven:3.3.3'
-    }
-  }
+  agent { label 'ubuntu' }
+ 
   stages
   {
-    stage('log-version-info')
+    stage('BUILD')
     {
       steps
+      
       {
-        sh 'mvn --version'
+        sh 'docker build -t rajeshktm007/summa:latest .'
       }
     }
   }
