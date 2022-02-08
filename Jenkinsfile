@@ -22,6 +22,12 @@ pipeline
         
         sh 'docker push rajeshktm007/summa'
       }
+      stage('DEPLOYMENT')
+      {
+        steps{
+          docker run -it --name firstdeplyment summa
+        }
+        
     }
   }
 }
