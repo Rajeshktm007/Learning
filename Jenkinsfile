@@ -21,6 +21,8 @@ pipeline
 
         sh 'docker login -u rajeshktm007 -p ${DOCKERHUBPASSWD}'
         sh 'docker push rajeshktm007/summa'
+      }
+    }
   }
 }
       
