@@ -26,7 +26,7 @@ pipeline
       stage('DEPLOYMENT')
       {
         steps{
-          sh 'docker run --name firstdeplyment rajeshktm007/sum'
+          sh 'docker run --name firstdeplym rajeshktm007/sum'
         }
         
     }
