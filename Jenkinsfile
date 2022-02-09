@@ -9,7 +9,7 @@ pipeline
       steps
       
       {
-        sh 'docker build -t rajeshktm007/summa:latest .'
+        sh 'docker build -t rajeshktm007/sum:latest .'
       }
     }
     stage('PUSH to DOCKERHUB')
@@ -20,13 +20,13 @@ pipeline
         sh 'docker login -u rajeshktm007 -p ${DOCKERHUBPASSWD}'
         }
         
-        sh 'docker push rajeshktm007/summa'
+        sh 'docker push rajeshktm007/sum'
       }
     }
       stage('DEPLOYMENT')
       {
         steps{
-          sh 'docker run --name firstdeplyment rajeshktm007/summa'
+          sh 'docker run --name firstdeplyment rajeshktm007/sum'
         }
         
     }
